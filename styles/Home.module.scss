@@ -1,0 +1,19 @@
+.wrapper {
+  height: 100vh;
+}
+
+.video_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  Justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+@media (min-width: 688px) {
+ .video_wrapper {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 10px;
+ }
+}
