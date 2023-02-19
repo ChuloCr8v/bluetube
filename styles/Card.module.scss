@@ -1,26 +1,26 @@
-
 .card {
-  width: 100%;
+  width: 400px;
+  height: 300px;
   &:hover {
-   .icon {
-     animation: ping 0.8s ease-in-out infinite;
-     color: red;
-   }
+    .icon {
+      animation: ping 0.8s ease-in-out infinite;
+      color: red;
+    }
   }
 }
 
 @keyframes ping {
   0% {
-    scale: 1.2
+    scale: 1.2;
   }
   100% {
-    scale: 1
+    scale: 1;
   }
 }
 
 .wrapper {
   display: grid;
-  gap: 20px
+  gap: 20px;
 }
 
 .thumbnail_wrapper {
@@ -38,6 +38,7 @@
 }
 
 .thumbnail {
+  background: #000;
   height: 200px;
   max-width: 100%;
   object-fit: cover;
@@ -71,7 +72,7 @@
   gap: 10px;
   p {
     color: #bbbbbb;
-    font-size: .9em;
+    font-size: 0.9em;
   }
 }
 
@@ -82,14 +83,14 @@
 }
 
 .list_icon {
-  font-size: .4rem;
+  font-size: 0.4rem;
   color: gray;
 }
 
 .title_wrapper {
   display: flex;
   align-items: center;
-  Justify-content: space-between;
+  justify-content: space-between;
 }
 
 .video_title {

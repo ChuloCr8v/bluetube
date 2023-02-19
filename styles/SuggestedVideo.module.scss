@@ -1,5 +1,6 @@
 .card {
-  width: 100%;
+  width: 400px;
+  height: 300px;
   &:hover {
     .icon {
       animation: ping 0.8s ease-in-out infinite;
@@ -10,10 +11,10 @@
 
 @keyframes ping {
   0% {
-    scale: 1.2
+    scale: 1.2;
   }
   100% {
-    scale: 1
+    scale: 1;
   }
 }
 
@@ -70,7 +71,7 @@
   gap: 10px;
   p {
     color: #bbbbbb;
-    font-size: .9em;
+    font-size: 0.9em;
   }
 }
 
@@ -81,14 +82,14 @@
 }
 
 .list_icon {
-  font-size: .4rem;
+  font-size: 0.4rem;
   color: gray;
 }
 
 .title_wrapper {
   display: flex;
   align-items: center;
-  Justify-content: space-between;
+  justify-content: space-between;
 }
 
 .video_title {
@@ -108,11 +109,11 @@
   .thumbnail_wrapper {
     min-width: 200px;
   }
-  
- .details_wrapper {
-   padding: 0;
-   padding: 0;
- }
+
+  .details_wrapper {
+    padding: 0;
+    padding: 0;
+  }
 
   .thumbnail {
     height: auto;
@@ -121,9 +122,9 @@
   .channel_picture {
     display: none;
   }
-  
- .stats_wrapper {
-   flex-direction: column;
-   align-items: flex-start;
- }
+
+  .stats_wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
