@@ -2,15 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10px;
+  padding: 20px;
   position: fixed;
-  left: 0;  
+  left: 0;
   top: 0;
   width: 100%;
   background: #000;
   z-index: 100;
 }
-
 
 .logo_wrapper {
   display: flex;
@@ -52,4 +51,17 @@
 
 .icon {
   position: absolute;
+  color: white;
+}
+
+.user_profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  img {
+    border-radius: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
 }

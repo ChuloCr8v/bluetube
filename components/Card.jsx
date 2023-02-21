@@ -9,26 +9,22 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const Card = (props) => {
-  const [channelDetails, setChannelDetails] = useState([]);
-  const [likes, setLikes] = useState("");
-
+  const [channelDetails, setChannelDetails] = useState("");
   useEffect(() => {
-    const getChannelDetails = async () => {
-      const res = await axios.get(
-        `http://localhost:8000/api/user/find/${props.data.userId}`
-      );
-    };
-    getChannelDetails();
+    try {
+      const getChannelDetails = async () => {
+        const res = await axios.get(
+          `http://localhost:8000/api/user/find/${props.data.userId}`
+        );
+        setChannelDetails(res.data);
+      };
+      getChannelDetails();
+    } catch (error) {
+      console.log(error);
+    }
   }, []);
 
-  useEffect(() => {
-    const likes = props.data.likes.map((like) => {
-      setLikes(likes);
-    });
-  }, []);
-
-  console.log(likes);
-
+  const likes = "I like you";
   return (
     <Link
       href={{
@@ -61,7 +57,7 @@ const Card = (props) => {
         <div className={styles.details_wrapper}>
           <Image
             src={props.data.channelPicture}
-            alt={props.data.channelName}
+            alt={channelDetails.username}
             className={styles.channel_picture}
             height="50"
             width="50"
@@ -73,7 +69,7 @@ const Card = (props) => {
             </div>
             <div className={styles.stats_wrapper}>
               <div className={styles.stat}>
-                <p className={styles.channel_name}>{props.data.channelName}</p>
+                <p className={styles.channel_name}>{channelDetails.username}</p>
               </div>
               <div className={styles.stat}>
                 <CircleIcon className={styles.list_icon} />
